@@ -75,6 +75,7 @@
             // 
             this.customersBindingSource.DataMember = "Customers";
             this.customersBindingSource.DataSource = this.northwindDataSet;
+            this.customersBindingSource.CurrentChanged += new System.EventHandler(this.customersBindingSource_CurrentChanged);
             // 
             // customersTableAdapter
             // 

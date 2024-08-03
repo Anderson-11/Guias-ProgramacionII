@@ -69,6 +69,7 @@
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.faxTextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             companyNameLabel = new System.Windows.Forms.Label();
             contactNameLabel = new System.Windows.Forms.Label();
             contactTitleLabel = new System.Windows.Forms.Label();
@@ -198,7 +199,7 @@
             // 
             // customersBindingNavigator
             // 
-            this.customersBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.customersBindingNavigator.AddNewItem = this.toolStripButton1;
             this.customersBindingNavigator.BindingSource = this.customersBindingSource;
             this.customersBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.customersBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -214,7 +215,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.customersBindingNavigatorSaveItem});
+            this.customersBindingNavigatorSaveItem,
+            this.toolStripButton1});
             this.customersBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.customersBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.customersBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -418,10 +420,20 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 24;
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
             // ejemploConexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(label1);
             this.Controls.Add(this.textBox1);
@@ -489,5 +501,6 @@
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.TextBox faxTextBox;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

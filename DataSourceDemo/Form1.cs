@@ -31,5 +31,10 @@ namespace DataSourceDemo
             this.customersTableAdapter.Fill(this.northwindDataSet.Customers);
 
         }
+
+        private void customersBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
