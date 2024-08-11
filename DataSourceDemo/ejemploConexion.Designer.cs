@@ -39,8 +39,8 @@
             System.Windows.Forms.Label countryLabel;
             System.Windows.Forms.Label phoneLabel;
             System.Windows.Forms.Label faxLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ejemploConexion));
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ejemploConexion));
             this.northwindDataSet = new DataSourceDemo.NorthwindDataSet();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customersTableAdapter = new DataSourceDemo.NorthwindDataSetTableAdapters.CustomersTableAdapter();
@@ -58,6 +58,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.cajaTextoID = new System.Windows.Forms.ToolStripTextBox();
             this.companyNameTextBox = new System.Windows.Forms.TextBox();
             this.contactNameTextBox = new System.Windows.Forms.TextBox();
             this.contactTitleTextBox = new System.Windows.Forms.TextBox();
@@ -69,7 +70,7 @@
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.faxTextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.buttonAgregar = new System.Windows.Forms.Button();
             companyNameLabel = new System.Windows.Forms.Label();
             contactNameLabel = new System.Windows.Forms.Label();
             contactTitleLabel = new System.Windows.Forms.Label();
@@ -177,6 +178,15 @@
             faxLabel.TabIndex = 21;
             faxLabel.Text = "Fax:";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(298, 73);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(65, 13);
+            label1.TabIndex = 23;
+            label1.Text = "CustomerID:";
+            // 
             // northwindDataSet
             // 
             this.northwindDataSet.DataSetName = "NorthwindDataSet";
@@ -199,7 +209,8 @@
             // 
             // customersBindingNavigator
             // 
-            this.customersBindingNavigator.AddNewItem = this.toolStripButton1;
+            this.customersBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.customersBindingNavigator.BackColor = System.Drawing.Color.WhiteSmoke;
             this.customersBindingNavigator.BindingSource = this.customersBindingSource;
             this.customersBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.customersBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -216,7 +227,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.customersBindingNavigatorSaveItem,
-            this.toolStripButton1});
+            this.cajaTextoID});
             this.customersBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.customersBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.customersBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -323,6 +334,13 @@
             this.customersBindingNavigatorSaveItem.Text = "Guardar datos";
             this.customersBindingNavigatorSaveItem.Click += new System.EventHandler(this.customersBindingNavigatorSaveItem_Click);
             // 
+            // cajaTextoID
+            // 
+            this.cajaTextoID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cajaTextoID.Name = "cajaTextoID";
+            this.cajaTextoID.Size = new System.Drawing.Size(100, 25);
+            this.cajaTextoID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cajaTextoID_KeyPress);
+            // 
             // companyNameTextBox
             // 
             this.companyNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "CompanyName", true));
@@ -403,15 +421,6 @@
             this.faxTextBox.Size = new System.Drawing.Size(100, 20);
             this.faxTextBox.TabIndex = 22;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(298, 73);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(65, 13);
-            label1.TabIndex = 23;
-            label1.Text = "CustomerID:";
-            // 
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "CustomerID", true));
@@ -420,14 +429,17 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 24;
             // 
-            // toolStripButton1
+            // buttonAgregar
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.buttonAgregar.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.buttonAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonAgregar.Location = new System.Drawing.Point(695, 43);
+            this.buttonAgregar.Name = "buttonAgregar";
+            this.buttonAgregar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAgregar.TabIndex = 25;
+            this.buttonAgregar.Text = "Agregar";
+            this.buttonAgregar.UseVisualStyleBackColor = false;
+            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
             // ejemploConexion
             // 
@@ -435,6 +447,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(companyNameLabel);
@@ -458,6 +471,7 @@
             this.Controls.Add(faxLabel);
             this.Controls.Add(this.faxTextBox);
             this.Controls.Add(this.customersBindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ejemploConexion";
             this.Text = "ejemploConexion";
             this.Load += new System.EventHandler(this.ejemploConexion_Load);
@@ -501,6 +515,7 @@
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.TextBox faxTextBox;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Button buttonAgregar;
+        private System.Windows.Forms.ToolStripTextBox cajaTextoID;
     }
 }
