@@ -55,5 +55,11 @@ namespace DataSourceDemo
                 }
             }
         }
+
+        private void CambiarPestaña_Click(object sender, EventArgs e)
+        {
+            Form1 ir = new Form1();
+            ir.ShowDialog();
+        }
     }
 }

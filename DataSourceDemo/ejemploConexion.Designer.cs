@@ -1,4 +1,6 @@
-﻿namespace DataSourceDemo
+﻿
+
+namespace DataSourceDemo
 {
     partial class ejemploConexion
     {
@@ -71,6 +73,7 @@
             this.faxTextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonAgregar = new System.Windows.Forms.Button();
+            this.CambiarPestaña = new System.Windows.Forms.Button();
             companyNameLabel = new System.Windows.Forms.Label();
             contactNameLabel = new System.Windows.Forms.Label();
             contactTitleLabel = new System.Windows.Forms.Label();
@@ -431,9 +434,9 @@
             // 
             // buttonAgregar
             // 
-            this.buttonAgregar.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.buttonAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonAgregar.Location = new System.Drawing.Point(695, 43);
+            this.buttonAgregar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAgregar.Location = new System.Drawing.Point(619, 43);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(75, 23);
             this.buttonAgregar.TabIndex = 25;
@@ -441,12 +444,24 @@
             this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
+            // CambiarPestaña
+            // 
+            this.CambiarPestaña.BackColor = System.Drawing.Color.LightGreen;
+            this.CambiarPestaña.Location = new System.Drawing.Point(711, 43);
+            this.CambiarPestaña.Name = "CambiarPestaña";
+            this.CambiarPestaña.Size = new System.Drawing.Size(75, 23);
+            this.CambiarPestaña.TabIndex = 26;
+            this.CambiarPestaña.Text = "Registros";
+            this.CambiarPestaña.UseVisualStyleBackColor = false;
+            this.CambiarPestaña.Click += new System.EventHandler(this.CambiarPestaña_Click);
+            // 
             // ejemploConexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CambiarPestaña);
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(label1);
             this.Controls.Add(this.textBox1);
@@ -487,10 +502,10 @@
 
         #endregion
 
-        private NorthwindDataSet northwindDataSet;
+        private NorthwindDataSet1 northwindDataSet;
         private System.Windows.Forms.BindingSource customersBindingSource;
-        private NorthwindDataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
-        private NorthwindDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private NorthwindDataSet1TableAdapters.CustomersTableAdapter customersTableAdapter;
+        private NorthwindDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator customersBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -517,5 +532,17 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.ToolStripTextBox cajaTextoID;
+        private System.Windows.Forms.Button CambiarPestaña;
+    }
+
+    internal class NorthwindDataSetTableAdapters
+    {
+        internal class CustomersTableAdapter : NorthwindDataSet1TableAdapters.CustomersTableAdapter
+        {
+        }
+
+        internal class TableAdapterManager : NorthwindDataSet1TableAdapters.TableAdapterManager
+        {
+        }
     }
 }

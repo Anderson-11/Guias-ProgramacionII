@@ -20,9 +20,9 @@ namespace DataSourceDemo {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("NorthwindDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("NorthwindDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class NorthwindDataSet : global::System.Data.DataSet {
+    public partial class NorthwindDataSet1 : global::System.Data.DataSet {
         
         private CustomersDataTable tableCustomers;
         
@@ -30,7 +30,7 @@ namespace DataSourceDemo {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public NorthwindDataSet() {
+        public NorthwindDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DataSourceDemo {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected NorthwindDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected NorthwindDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace DataSourceDemo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            NorthwindDataSet cln = ((NorthwindDataSet)(base.Clone()));
+            NorthwindDataSet1 cln = ((NorthwindDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace DataSourceDemo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "NorthwindDataSet";
+            this.DataSetName = "NorthwindDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/NorthwindDataSet.xsd";
+            this.Namespace = "http://tempuri.org/NorthwindDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCustomers = new CustomersDataTable();
@@ -225,7 +225,7 @@ namespace DataSourceDemo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            NorthwindDataSet ds = new NorthwindDataSet();
+            NorthwindDataSet1 ds = new NorthwindDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -623,7 +623,7 @@ namespace DataSourceDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NorthwindDataSet ds = new NorthwindDataSet();
+                NorthwindDataSet1 ds = new NorthwindDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1006,7 +1006,7 @@ namespace DataSourceDemo {
         }
     }
 }
-namespace DataSourceDemo.NorthwindDataSetTableAdapters {
+namespace DataSourceDemo.NorthwindDataSet1TableAdapters {
     
     
     /// <summary>
@@ -1224,7 +1224,7 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataSourceDemo.Properties.Settings.Default.NorthwindConnectionString;
+            this._connection.ConnectionString = global::DataSourceDemo.Properties.Settings.Default.NorthwindConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1242,7 +1242,7 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NorthwindDataSet.CustomersDataTable dataTable) {
+        public virtual int Fill(NorthwindDataSet1.CustomersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1255,9 +1255,9 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NorthwindDataSet.CustomersDataTable GetData() {
+        public virtual NorthwindDataSet1.CustomersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NorthwindDataSet.CustomersDataTable dataTable = new NorthwindDataSet.CustomersDataTable();
+            NorthwindDataSet1.CustomersDataTable dataTable = new NorthwindDataSet1.CustomersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1265,14 +1265,14 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NorthwindDataSet.CustomersDataTable dataTable) {
+        public virtual int Update(NorthwindDataSet1.CustomersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NorthwindDataSet dataSet) {
+        public virtual int Update(NorthwindDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Customers");
         }
         
@@ -1797,7 +1797,7 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(NorthwindDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(NorthwindDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._customersTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Customers.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1816,7 +1816,7 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(NorthwindDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(NorthwindDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._customersTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Customers.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1834,7 +1834,7 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(NorthwindDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(NorthwindDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._customersTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Customers.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1876,7 +1876,7 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(NorthwindDataSet dataSet) {
+        public virtual int UpdateAll(NorthwindDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
